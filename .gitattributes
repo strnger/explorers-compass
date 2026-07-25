@@ -1,0 +1,2 @@
+# Unix shell scripts must keep LF endings
+gradlew text eol=lf

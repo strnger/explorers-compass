@@ -55,6 +55,16 @@ This first release focuses on agility shortcuts because they're purely level-gat
 
 Run `ExplorersCompassPluginTest.main()` from your IDE to launch RuneLite with the plugin loaded.
 
+**Important:** RuneLite requires assertions to be enabled. If you see
+`RuntimeException: Assertions are not enabled, add '-ea' to your VM options`,
+add `-ea` to your run configuration's VM options:
+
+- **IntelliJ IDEA:** Run -> Edit Configurations -> select the
+  `ExplorersCompassPluginTest` config -> add `-ea` to *VM options*
+  (enable *Modify options -> Add VM options* if the field is hidden).
+
+This is a RuneLite requirement for all plugin dev clients, not specific to this plugin.
+
 ## Credits
 
 Shortcut coordinates and level requirements were derived from the excellent

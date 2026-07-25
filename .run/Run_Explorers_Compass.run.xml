@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Explorer's Compass" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.explorerscompass.ExplorersCompassPluginTest" />
+    <module name="explorers-compass.test" />
+    <option name="VM_PARAMETERS" value="-ea" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

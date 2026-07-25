@@ -53,17 +53,22 @@ This first release focuses on agility shortcuts because they're purely level-gat
 
 ## Running (dev mode)
 
-Run `ExplorersCompassPluginTest.main()` from your IDE to launch RuneLite with the plugin loaded.
+The project ships with a ready-to-use IntelliJ run configuration named
+**"Run Explorer's Compass"** (in the `.run/` folder). Just pick it from the
+run-config dropdown (top-right of IntelliJ) and hit the green arrow.
 
-**Important:** RuneLite requires assertions to be enabled. If you see
-`RuntimeException: Assertions are not enabled, add '-ea' to your VM options`,
-add `-ea` to your run configuration's VM options:
+**Why not the gutter icon?** RuneLite requires assertions to be enabled
+(`-ea`). The bundled config sets this in the JVM's *VM options*. If you instead
+use the green arrow next to `main()` (which runs via Gradle) or hand-roll a
+config, you may hit:
 
-- **IntelliJ IDEA:** Run -> Edit Configurations -> select the
-  `ExplorersCompassPluginTest` config -> add `-ea` to *VM options*
-  (enable *Modify options -> Add VM options* if the field is hidden).
+```
+RuntimeException: Assertions are not enabled, add '-ea' to your VM options.
+```
 
-This is a RuneLite requirement for all plugin dev clients, not specific to this plugin.
+If you build your own config, make sure `-ea` goes in **VM options** (JVM args),
+*not* Program arguments. This is a RuneLite requirement for every plugin dev
+client, not something specific to this plugin.
 
 ## Credits
 
